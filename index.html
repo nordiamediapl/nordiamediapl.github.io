@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiksofera – Nowinki z telewizji fikcyjnych</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+
+    /* Menu górne */
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: #fff;
+      padding: 15px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    nav a {
+      margin: 5px 15px;
+      color: #FF6600;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Sekcja aktualności */
+    .news-section {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+    .news-section h2 {
+      color: #FF6600;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .news-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .news-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    .news-card img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    .news-card-content {
+      padding: 15px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .news-card h3 {
+      margin: 0 0 10px;
+      color: #FF6600;
+    }
+    .news-card p {
+      flex: 1;
+      margin: 0 0 10px;
+    }
+    .news-card .date {
+      font-size: 0.8em;
+      color: #999;
+      margin-bottom: 10px;
+    }
+    .news-card a.button {
+      background: #FF6600;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    /* Polecane tematy */
+    .featured-section {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 15px;
+    }
+    .featured-section h2 {
+      color: #FF6600;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+      gap: 20px;
+    }
+    .featured-card {
+      background:white;
+      padding:15px;
+      border-radius:8px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.1);
+      display:flex;
+      flex-direction:column;
+    }
+    .featured-card h4 {
+      color:#FF6600;
+      margin-top:0;
+    }
+    .featured-card a.button {
+      margin-top: auto;
+      background:#FF6600;
+      color:white;
+      text-decoration:none;
+      text-align:center;
+      padding:6px 10px;
+      border-radius:5px;
+      font-weight:bold;
+    }
+
+    /* Stopka */
+    footer {
+      background:#222;
+      color:white;
+      text-align:center;
+      padding:20px;
+      margin-top:40px;
+    }
+    footer a {
+      color:#FF6600;
+      text-decoration:none;
+    }
+    footer a:hover {
+      text-decoration:underline;
+    }
+
+    /* Responsywność obrazków i gridu */
+    @media (max-width: 600px) {
+      .news-card h3 {
+        font-size: 1.1em;
+      }
+      .news-card p {
+        font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MENU -->
+  <nav>
+    <a href="#">Strona główna</a>
+    <a href="#">Telewizje</a>
+    <a href="#">Programy</a>
+    <a href="#">Nowości</a>
+    <a href="#">Kontakt</a>
+  </nav>
+
+  <!-- AKTUALNOŚCI -->
+  <section class="news-section">
+    <h2>Najnowsze wiadomości</h2>
+    <div class="news-grid">
+
+      <!-- NEWS 1 -->
+      <div class="news-card">
+        <img src="https://via.placeholder.com/600x180?text=Magazyn+Fikcyjny" alt="Magazyn Fikcyjny">
+        <div class="news-card-content">
+          <h3>Magazyn Fikcyjny – wydanie 1 stycznia 2026</h3>
+          <p>Premiera nowego odcinka programu o telewizjach fikcyjnych. Zobacz najnowsze newsy, zapowiedzi i aktualne tematy.</p>
+          <div class="date">Opublikowano: 01.01.2026</div>
+          <a href="#" class="button">Czytaj dalej</a>
+        </div>
+      </div>
+
+      <!-- NEWS 2 -->
+      <div class="news-card">
+        <img src="https://via.placeholder.com/600x180?text=Digitele+Infomagazyn" alt="Digitele Infomagazyn">
+        <div class="news-card-content">
+          <h3>Digitele startuje z Infomagazynem</h3>
+          <p>Nowy program informacyjny Digitele o wydarzeniach ze świata, Polski i telewizji fikcyjnej. Screeny sceny i szczegóły emisji.</p>
+          <div class="date">Opublikowano: 01.01.2026</div>
+          <a href="#" class="button">Czytaj dalej</a>
+        </div>
+      </div>
+
+      <!-- NEWS 3 -->
+      <div class="news-card">
+        <img src="https://via.placeholder.com/600x180?text=Reflektor+powraca" alt="Reflektor">
+        <div class="news-card-content">
+          <h3>Reflektor powraca</h3>
+          <p>Telewizja Olixer ogłasza powrót programu informacyjnego Reflektor – nowe wydania będą analizować wydarzenia ze świata i telewizji fikcyjnej.</p>
+          <div class="date">Opublikowano: 01.01.2026</div>
+          <a href="#" class="button">Czytaj dalej</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- POLECANE TEMATY -->
+  <section class="featured-section">
+    <h2>Polecane tematy</h2>
+    <div class="featured-grid">
+
+      <!-- TEMAT 1 -->
+      <div class="featured-card">
+        <h4>Magazyn Fikcyjny</h4>
+        <p>Krótki program o telewizjach fikcyjnych, 5–10 minut, premierowo o 18:30.</p>
+        <a href="#" class="button">Czytaj dalej</a>
+      </div>
+
+      <!-- TEMAT 2 -->
+      <div class="featured-card">
+        <h4>Infomagazyn (Digitele)</h4>
+        <p>Wiadomości ze świata, Polski i telewizji fikcyjnej – nowe formaty Digitele.</p>
+        <a href="#" class="button">Czytaj dalej</a>
+      </div>
+
+      <!-- TEMAT 3 -->
+      <div class="featured-card">
+        <h4>Reflektor (Olixer)</h4>
+        <p>Analiza wydarzeń z telewizji fikcyjnej i świata – powrót programu w nowej formule.</p>
+        <a href="#" class="button">Czytaj dalej</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STOPKA -->
+  <footer>
+    <p>&copy; 2026 Fiksofera – Wszystkie prawa zastrzeżone</p>
+    <p>Kontakt: <a href="mailto:kontakt@fiksofera.pl">kontakt@fiksofera.pl</a></p>
+  </footer>
+
+</body>
+</html>
